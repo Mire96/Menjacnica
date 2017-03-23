@@ -8,22 +8,23 @@ import interfejsMenjacnice.InterfejsMenjacnice;
 public class KursnaLista implements InterfejsMenjacnice {
 	
 	private LinkedList<Valuta> lista;
-    
+	
 	@Override
-	public void dodavanjeKursaZaDan(double prodajni, double kupovni, double srednji, Date datum) {
-		
+	public void dodavanjeKursaZaDan(String naziv, String skraceni, Date datum, double prodajni, double kupovni,
+			double srednji) {
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void brisanjeKursaZaDan(Date datum) {
-		
+	public void brisanjeKursaZaDan(String naziv, Date datum) {
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public Valuta pronadjiKursZaDan(Date datum) {
-		
+	public Valuta pronadjiKursZaDan(String naziv, Date datum) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

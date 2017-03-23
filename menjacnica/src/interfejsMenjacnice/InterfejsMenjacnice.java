@@ -5,7 +5,7 @@ import menjacnica.Valuta;
 
 public interface InterfejsMenjacnice {
 	
-	public void dodavanjeKursaZaDan(double prodajni, double kupovni, double srednji, Date datum);
-	public void brisanjeKursaZaDan(Date datum);
-	public Valuta pronadjiKursZaDan(Date datum);
+	public void dodavanjeKursaZaDan(String naziv, String skraceni, Date datum, double prodajni, double kupovni, double srednji);
+	public void brisanjeKursaZaDan(String naziv, Date datum);
+	public Valuta pronadjiKursZaDan(String naziv, Date datum);
 }
