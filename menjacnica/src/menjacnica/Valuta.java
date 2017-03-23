@@ -70,36 +70,54 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if (naziv == null) {
+			throw new RuntimeException("Naziv je null");
+		}
 		this.naziv = naziv;
 	}
 	public String getSkraceni() {
 		return skraceni;
 	}
 	public void setSkraceni(String skraceni) {
+		if (skraceni == null) {
+			throw new RuntimeException("Skraceni naziv je null");
+		}
 		this.skraceni = skraceni;
 	}
 	public Date getDatum() {
 		return datum;
 	}
 	public void setDatum(Date datum) {
+		if (datum == null) {
+			throw new RuntimeException("Datum je null");
+		}
 		this.datum = datum;
 	}
 	public double getProdajni() {
 		return prodajni;
 	}
 	public void setProdajni(double prodajni) {
+		if (prodajni == 0) {
+			throw new RuntimeException("Uneseni prodajni kurs je 0");
+		}
 		this.prodajni = prodajni;
 	}
 	public double getKupovni() {
 		return kupovni;
 	}
 	public void setKupovni(double kupovni) {
+		if (kupovni == 0) {
+			throw new RuntimeException("Uneseni kupovni kurs je 0");
+		}
 		this.kupovni = kupovni;
 	}
 	public double getSrednji() {
 		return srednji;
 	}
 	public void setSrednji(double srednji) {
+		if (srednji == 0) {
+			throw new RuntimeException("Uneseni srednji kurs je 0");
+		}
 		this.srednji = srednji;
 	}
 	
