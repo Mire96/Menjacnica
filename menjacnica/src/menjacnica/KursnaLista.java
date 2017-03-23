@@ -12,20 +12,31 @@ public class KursnaLista implements InterfejsMenjacnice {
 	@Override
 	public void dodavanjeKursaZaDan(String naziv, String skraceni, Date datum, double prodajni, double kupovni,
 			double srednji) {
+
 		Valuta nova = new Valuta(naziv, skraceni, datum, prodajni, kupovni, srednji);
 		lista.add(nova);
+
 
 	}
 
 	@Override
 	public void brisanjeKursaZaDan(String naziv, Date datum) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < lista.size(); i++) {
+			if( (lista.get(i).getNaziv() == naziv) && lista.get(i).getDatum().equals(datum)){
+				lista.remove(i);
+				return;
+			}
+		}
 
 	}
 
 	@Override
 	public Valuta pronadjiKursZaDan(String naziv, Date datum) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < lista.size(); i++) {
+			if(lista.get(i).getNaziv() == naziv && lista.get(i).getDatum().equals(datum))
+				return lista.get(i);
+		}
+		System.out.println("Trazena valuta za taj datum ne postoji.");
 		return null;
 	}
 
