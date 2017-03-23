@@ -10,6 +10,15 @@ public class Valuta {
 	private double kupovni;
 	private double srednji;
 	
+	public Valuta(String naziv, String skraceni, Date datum, double prodajni, double kupovni, double srednji) {
+		super();
+		this.naziv = naziv;
+		this.skraceni = skraceni;
+		this.datum = datum;
+		this.prodajni = prodajni;
+		this.kupovni = kupovni;
+		this.srednji = srednji;
+	}
 	
 	
 	@Override
@@ -120,5 +129,6 @@ public class Valuta {
 		}
 		this.srednji = srednji;
 	}
+	
 	
 }
