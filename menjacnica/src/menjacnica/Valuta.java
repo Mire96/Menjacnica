@@ -21,6 +21,8 @@ public class Valuta {
 	}
 	
 	
+	
+	
 	@Override
 	public String toString() {
 		return "Valuta " + naziv + ", skraceni naziv " + skraceni + ", na datum" + datum + " ima prodajni kurs: " + prodajni

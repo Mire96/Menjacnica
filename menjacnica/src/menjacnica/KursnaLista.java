@@ -12,7 +12,8 @@ public class KursnaLista implements InterfejsMenjacnice {
 	@Override
 	public void dodavanjeKursaZaDan(String naziv, String skraceni, Date datum, double prodajni, double kupovni,
 			double srednji) {
-		// TODO Auto-generated method stub
+		Valuta nova = new Valuta(naziv, skraceni, datum, prodajni, kupovni, srednji);
+		lista.add(nova);
 
 	}
 
